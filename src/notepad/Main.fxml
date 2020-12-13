@@ -24,15 +24,25 @@
               <items>
                   <Menu mnemonicParsing="false" text="Text size">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="12" />
-                      <MenuItem mnemonicParsing="false" text="14" />
-                        <MenuItem mnemonicParsing="false" text="28" />
+                        <MenuItem fx:id="s12" mnemonicParsing="false" onAction="#changeSize" text="12" />
+                      <MenuItem fx:id="s14" mnemonicParsing="false" onAction="#changeSize" text="14" />
+                        <MenuItem fx:id="s16" mnemonicParsing="false" onAction="#changeSize" text="16" />
+                        <MenuItem fx:id="s18" mnemonicParsing="false" onAction="#changeSize" text="18" />
+                        <MenuItem fx:id="s20" mnemonicParsing="false" onAction="#changeSize" text="20" />
+                        <MenuItem fx:id="s22" mnemonicParsing="false" onAction="#changeSize" text="22" />
+                        <MenuItem fx:id="s24" mnemonicParsing="false" onAction="#changeSize" text="24" />
+                        <MenuItem fx:id="s26" mnemonicParsing="false" onAction="#changeSize" text="26" />
+                        <MenuItem fx:id="s28" mnemonicParsing="false" onAction="#changeSize" text="28" />
+                        <MenuItem fx:id="s30" mnemonicParsing="false" onAction="#changeSize" text="30" />
                     </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Font">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Monospace" />
-                      <MenuItem mnemonicParsing="false" text="Cosolas" />
+                        <MenuItem fx:id="arial" mnemonicParsing="false" onAction="#changeFont" text="Arial" />
+                        <MenuItem fx:id="century" mnemonicParsing="false" onAction="#changeFont" text="Century" />
+                      <MenuItem fx:id="consolas" mnemonicParsing="false" onAction="#changeFont" text="Cosolas" />
+                        <MenuItem fx:id="georgia" mnemonicParsing="false" onAction="#changeFont" text="Georgia" />
+                      <MenuItem fx:id="monospace" mnemonicParsing="false" onAction="#changeFont" text="Monospace" />
                     </items>
                   </Menu>
               </items>
@@ -46,7 +56,7 @@
       </MenuBar>
    </top>
    <center>
-      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: none;" stylesheets="@style.css" wrapText="true" BorderPane.alignment="CENTER">
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: none;" stylesheets="@style.css" BorderPane.alignment="CENTER">
          <font>
             <Font name="Consolas" size="14.0" />
          </font></TextArea>
