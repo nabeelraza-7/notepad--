@@ -5,10 +5,14 @@ import java.io.*;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.stage.FileChooser.ExtensionFilter;
 
 public class MainController{
@@ -149,5 +153,16 @@ public class MainController{
     }
     public void triggerChange(){
         textArea.setFont(Font.font(currentFont, currentSize));
+    }
+
+    public void aboutPopup(ActionEvent e){
+        Image icon = new Image(new File("src/notepad/icon.png").toURI().toString());
+        Alert alert = new Alert(AlertType.INFORMATION);
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(icon);
+        alert.setTitle("About Notepad--");
+        alert.setHeaderText("NotePad--");
+        alert.setContentText("Notepad-- is a simple notepad app. The name was inspired from notepad++");
+        alert.showAndWait();
     }
 }
